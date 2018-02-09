@@ -22,7 +22,7 @@ yarn add microtools
 ### JavaScript
 
 ```javascript
-var microtools = require('microtools');
+var microtools = require('@hallysonh/microtools');
 var cfg = require('./config');
 microtools.consultRegister(ctx, cfg.appConfig, cfg.consulConfig);
 ```
@@ -30,7 +30,7 @@ microtools.consultRegister(ctx, cfg.appConfig, cfg.consulConfig);
 ### TypeScript
 
 ```typescript
-import { consulRegister } from 'mypluralize';
+import { consulRegister } from '@hallysonh/microtools';
 import { appConfig, consulConfig } from './config';
 consulRegister(ctx, appConfig, consulConfig);
 ```
