@@ -1,7 +1,8 @@
 # Microtools
 
 [![Build Status](https://travis-ci.org/hallysonh/microtools.svg?branch=master)](https://travis-ci.org/hallysonh/microtools)
-[![npm version](https://badge.fury.io/js/microtools.svg)](https://badge.fury.io/js/microtools)
+[![npm version](https://badge.fury.io/js/%40hallysonh%2Fmicrotools.svg)](https://badge.fury.io/js/%40hallysonh%2Fmicrotools)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 A Node.js module that returns the plural or singular form of any noun
 
@@ -12,7 +13,7 @@ Access the documentation [here](https://hallysonh.github.io/microtools)
 ## Installation
 
 ```sh
-npm install microtools --save
+npm i -S microtools
 yarn add microtools
 ```
 
@@ -22,12 +23,14 @@ yarn add microtools
 
 ```javascript
 var microtools = require('microtools');
-// TODO
+var cfg = require('./config');
+microtools.consultRegister(ctx, cfg.appConfig, cfg.consulConfig);
 ```
 
 ### TypeScript
 
 ```typescript
-import { getPlural } from 'mypluralize';
-// TODO
+import { consulRegister } from 'mypluralize';
+import { appConfig, consulConfig } from './config';
+consulRegister(ctx, appConfig, consulConfig);
 ```
