@@ -1,4 +1,4 @@
-import * as env from '../src/modules/utils/enviroment';
+import * as env from '../src/enviroment';
 
 describe('Enviroment functions', () => {
 

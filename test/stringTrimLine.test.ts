@@ -1,4 +1,4 @@
-import '../src/modules/utils/stringTrimLine';
+import '../src/utils';
 
 describe('String Util functions', () => {
   it('works if stringTrimLine trim spaces and remove lines from a string', async () => {

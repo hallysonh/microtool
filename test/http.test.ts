@@ -1,5 +1,5 @@
 import * as Router from 'koa-router';
-import * as http from '../src/modules/utils/http';
+import * as http from '../src/http';
 
 describe('Http functions', () => {
   it('works if checkHttpResult return success (200) when promise resolves', async () => {
