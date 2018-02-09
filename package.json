@@ -2,7 +2,12 @@
   "name": "@hallysonh/microtools",
   "version": "0.0.0-development",
   "description": "Tools for microservices and http requests",
-  "keywords": ["microservice","koa","nodejs","consul"],
+  "keywords": [
+    "microservice",
+    "koa",
+    "nodejs",
+    "consul"
+  ],
   "main": "dist/microtools.umd.js",
   "module": "dist/microtools.es5.js",
   "typings": "dist/types/microtools.d.ts",
@@ -67,22 +72,23 @@
   },
   "devDependencies": {
     "@types/consul": "^0.23.32",
-    "@types/jest": "^22.0.0",
+    "@types/jest": "^22.1.2",
     "@types/koa": "^2.0.44",
     "@types/koa-router": "^7.0.27",
     "@types/node": "^8.9.1",
     "colors": "^1.1.2",
     "commitizen": "^2.9.6",
+    "copy": "^0.3.1",
     "cross-env": "^5.0.1",
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.0",
-    "jest": "^22.2.1",
+    "jest": "^22.2.2",
     "lint-staged": "^6.0.0",
     "prettier": "^1.4.4",
     "prompt": "^1.0.0",
     "replace-in-file": "^3.0.0-beta.2",
     "rimraf": "^2.6.1",
-    "rollup": "^0.55.3",
+    "rollup": "^0.55.4",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-json": "^2.3.0",
     "rollup-plugin-node-resolve": "^3.0.0",
@@ -100,9 +106,9 @@
     "validate-commit-msg": "^2.12.2"
   },
   "peerDependencies": {
+    "consul": "^0.30.0",
     "koa": "^2.4.1",
     "koa-router": "^7.4.0",
-    "consul": "^0.30.0",
     "pidusage": "^1.2.0"
   },
   "config": {
