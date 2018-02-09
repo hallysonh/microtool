@@ -1,7 +1,7 @@
 {
   "name": "@hallysonh/microtools",
   "version": "0.0.0-development",
-  "description": "",
+  "description": "Tools for microservices and http requests",
   "keywords": ["microservice","koa","nodejs","consul"],
   "main": "dist/microtools.umd.js",
   "module": "dist/microtools.es5.js",
@@ -28,7 +28,7 @@
     "test:prod": "npm run lint && npm run test -- --coverage --no-cache",
     "deploy-docs": "ts-node tools/gh-pages-publish",
     "commit": "git-cz",
-    "semantic-release": "semantic-release",
+    "semantic-release": "copy package.json dist && cd dist && semantic-release",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
     "prepush": "npm run test:prod && npm run build",
     "commitmsg": "validate-commit-msg",
