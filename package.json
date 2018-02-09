@@ -1,12 +1,14 @@
 {
   "name": "microtools",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "description": "",
   "keywords": [],
   "main": "dist/microtools.umd.js",
   "module": "dist/microtools.es5.js",
   "typings": "dist/types/microtools.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "author": "Hallyson Almeida <hallysonh@gmail.com>",
   "repository": {
     "type": "git",
@@ -29,18 +31,29 @@
     "semantic-release": "semantic-release",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
     "prepush": "npm run test:prod && npm run build",
-    "commitmsg": "validate-commit-msg"
+    "commitmsg": "validate-commit-msg",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "lint-staged": {
-    "{src,test}/**/*.ts": ["prettier --write --no-semi --single-quote", "git add"]
+    "{src,test}/**/*.ts": [
+      "prettier --write --no-semi --single-quote",
+      "git add"
+    ]
   },
   "jest": {
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": ["ts", "tsx", "js"],
-    "coveragePathIgnorePatterns": ["/node_modules/", "/test/"],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 90,
@@ -98,8 +111,7 @@
     },
     "validate-commit-msg": {
       "types": "conventional-commit-types",
-      "helpMessage":
-        "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
+      "helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
     }
   }
 }
