@@ -1,3 +1,5 @@
+/// <reference path="./string.d.ts" />
+
 const CONSECUTIVE_SPACES = /^\x20+|\x20+$/gm;
 const NEWLINES_MATCH = /[\r\n]+/g;
 
