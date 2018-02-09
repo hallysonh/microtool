@@ -6,9 +6,7 @@
   "main": "dist/microtools.umd.js",
   "module": "dist/microtools.es5.js",
   "typings": "dist/types/microtools.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "author": "Hallyson Almeida <hallysonh@gmail.com>",
   "repository": {
     "type": "git",
@@ -31,38 +29,18 @@
     "semantic-release": "semantic-release",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
     "prepush": "npm run test:prod && npm run build",
-    "commitmsg": "validate-commit-msg",
-    "travis-deploy-once": "travis-deploy-once"
+    "commitmsg": "validate-commit-msg"
   },
   "lint-staged": {
-    "{src,test}/**/*.ts": [
-      "prettier --write --no-semi --single-quote",
-      "git add"
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    },
-    "validate-commit-msg": {
-      "types": "conventional-commit-types",
-      "helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
-    }
+    "{src,test}/**/*.ts": ["prettier --write --no-semi --single-quote", "git add"]
   },
   "jest": {
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/test/"
-    ],
+    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "coveragePathIgnorePatterns": ["/node_modules/", "/test/"],
     "coverageThreshold": {
       "global": {
         "branches": 90,
@@ -79,19 +57,19 @@
     "@types/jest": "^22.0.0",
     "@types/koa": "^2.0.44",
     "@types/koa-router": "^7.0.27",
-    "@types/node": "^8.0.0",
+    "@types/node": "^8.9.1",
     "colors": "^1.1.2",
     "commitizen": "^2.9.6",
     "cross-env": "^5.0.1",
-    "cz-conventional-changelog": "^2.0.0",
+    "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.0",
-    "jest": "^22.0.2",
+    "jest": "^22.2.1",
     "lint-staged": "^6.0.0",
     "prettier": "^1.4.4",
     "prompt": "^1.0.0",
     "replace-in-file": "^3.0.0-beta.2",
     "rimraf": "^2.6.1",
-    "rollup": "^0.54.1",
+    "rollup": "^0.55.3",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-json": "^2.3.0",
     "rollup-plugin-node-resolve": "^3.0.0",
@@ -113,5 +91,15 @@
     "koa-router": "^7.4.0",
     "consul": "^0.30.0",
     "pidusage": "^1.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "validate-commit-msg": {
+      "types": "conventional-commit-types",
+      "helpMessage":
+        "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
+    }
   }
 }
