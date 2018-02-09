@@ -1,8 +1,8 @@
 {
-  "name": "microtools",
+  "name": "@hallysonh/microtools",
   "version": "0.0.0-development",
   "description": "",
-  "keywords": [],
+  "keywords": ["microservice","koa","nodejs","consul"],
   "main": "dist/microtools.umd.js",
   "module": "dist/microtools.es5.js",
   "typings": "dist/types/microtools.d.ts",
