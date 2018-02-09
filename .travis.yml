@@ -15,4 +15,4 @@ script:
   - npm run test:prod && npm run build
 after_success:
   - npm run deploy-docs
-  - npm run semantic-release
+  - cd build && ../node_modules/.bin/semantic-release
