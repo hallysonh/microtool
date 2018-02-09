@@ -8,12 +8,9 @@
     "nodejs",
     "consul"
   ],
-  "main": "dist/microtools.umd.js",
-  "module": "dist/microtools.es5.js",
-  "typings": "dist/types/microtools.d.ts",
-  "files": [
-    "dist"
-  ],
+  "main": "microtools.umd.js",
+  "module": "microtools.es5.js",
+  "typings": "types/microtools.d.ts",
   "author": "Hallyson Almeida <hallysonh@gmail.com>",
   "repository": {
     "type": "git",
