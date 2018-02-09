@@ -6,6 +6,10 @@
 
 A Node.js module that returns the plural or singular form of any noun
 
+## Documentation
+
+Access the documentation [here](https://hallysonh.github.io/microtools)
+
 ## Installation
 
 ```sh
