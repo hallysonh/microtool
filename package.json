@@ -8,9 +8,9 @@
     "nodejs",
     "consul"
   ],
-  "main": "dist/microtools.umd.js",
-  "module": "dist/microtools.es5.js",
-  "typings": "dist/types/microtools.d.ts",
+  "main": "microtools.umd.js",
+  "module": "microtools.es5.js",
+  "typings": "microtools.d.ts",
   "author": "Hallyson Almeida <hallysonh@gmail.com>",
   "repository": {
     "type": "git",
@@ -22,15 +22,15 @@
   },
   "scripts": {
     "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
-    "prebuild": "rimraf dist",
-    "build": "tsc --module commonjs --outDir dist/lib && rollup -c rollup.config.ts && typedoc --out dist/docs --target es6 --theme minimal --mode file src",
+    "prebuild": "rimraf dist docs",
+    "build": "rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal --mode file src && copy package.json dist",
     "start": "rollup -c rollup.config.ts -w",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "test:prod": "npm run lint && npm run test -- --coverage --no-cache",
     "deploy-docs": "ts-node tools/gh-pages-publish",
     "commit": "git-cz",
-    "semantic-release": "copy package.json dist && cd dist && semantic-release",
+    "semantic-release": "semantic-release",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
     "prepush": "npm run test:prod && npm run build",
     "commitmsg": "validate-commit-msg",
@@ -85,15 +85,15 @@
     "prompt": "^1.0.0",
     "replace-in-file": "^3.0.0-beta.2",
     "rimraf": "^2.6.1",
-    "rollup": "^0.55.4",
+    "rollup": "^0.55.5",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-json": "^2.3.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
-    "rollup-plugin-typescript2": "^0.11.0",
+    "rollup-plugin-typescript2": "^0.11.1",
     "semantic-release": "^12.4.1",
     "travis-deploy-once": "^4.3.4",
-    "ts-jest": "^22.0.0",
+    "ts-jest": "^22.0.4",
     "ts-node": "^4.1.0",
     "tslint": "^5.8.0",
     "tslint-config-prettier": "^1.1.0",
@@ -116,5 +116,14 @@
       "types": "conventional-commit-types",
       "helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
     }
+  },
+  "release": {
+    "publish": [
+      {
+        "path": "@semantic-release/npm",
+        "pkgRoot": "dist"
+      },
+      "@semantic-release/github"
+    ]
   }
 }
