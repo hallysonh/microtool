@@ -21,7 +21,7 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "lint": "tslint --project tsconfig.json",
     "prebuild": "rimraf dist docs",
     "build": "rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal --mode file src && copy package.json dist",
     "start": "rollup -c rollup.config.ts -w",

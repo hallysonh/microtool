@@ -2,6 +2,73 @@ import { IRouterContext } from "koa-router";
 
 import { isDev } from "./enviroment";
 
+
+//#region class definition
+
+export enum MonitorStatus {
+  OK = "ok",
+  WARN = "warn"
+}
+
+export interface Monitor {
+  os: OsInfo;
+  heap: Space[];
+  process: ProcessInfo;
+  status?: MonitorStatus;
+}
+
+export interface ProcessInfo {
+  uptime: number;
+  cpuUsage: {
+    system: number;
+    user: number;
+  };
+  memoryUsage: {
+    external: number;
+    heapTotal: number;
+    heapUsed: number;
+    rss: number;
+  };
+  percent: {
+    cpu: number;
+    memory: number;
+  };
+}
+
+export interface OsInfo {
+  hostname: string;
+  platform: string;
+  uptime: number;
+  arch: string;
+  cpus: Processor[];
+  avg: number;
+  memory: {
+    free: number;
+    total: number;
+  };
+}
+
+export interface Space {
+  physical_space_size: number;
+  space_available_size: number;
+  space_name: string;
+  space_size: number;
+  space_used_size: number;
+}
+
+export interface Processor {
+  model: string;
+  speed: number;
+  times: {
+    idle: number;
+    irq: number;
+    nice: number;
+    sys: number;
+    user: number;
+  };
+}
+//#endregion
+
 const os = require("os");
 const v8 = require("v8");
 const process = require("process");
@@ -120,73 +187,6 @@ function getCpuMemoryPercent() {
       resolve(stat);
     });
   });
-}
-
-//#endregion
-
-//#region class definition
-
-export enum MonitorStatus {
-  OK = "ok",
-  WARN = "warn"
-}
-
-export interface Monitor {
-  os: OsInfo;
-  heap: Space[];
-  process: ProcessInfo;
-  status?: MonitorStatus;
-}
-
-export interface ProcessInfo {
-  uptime: number;
-  cpuUsage: {
-    system: number;
-    user: number;
-  };
-  memoryUsage: {
-    external: number;
-    heapTotal: number;
-    heapUsed: number;
-    rss: number;
-  };
-  percent: {
-    cpu: number;
-    memory: number;
-  };
-}
-
-export interface OsInfo {
-  hostname: string;
-  platform: string;
-  uptime: number;
-  arch: string;
-  cpus: Processor[];
-  avg: number;
-  memory: {
-    free: number;
-    total: number;
-  };
-}
-
-export interface Space {
-  physical_space_size: number;
-  space_available_size: number;
-  space_name: string;
-  space_size: number;
-  space_used_size: number;
-}
-
-export interface Processor {
-  model: string;
-  speed: number;
-  times: {
-    idle: number;
-    irq: number;
-    nice: number;
-    sys: number;
-    user: number;
-  };
 }
 
 //#endregion
