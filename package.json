@@ -104,10 +104,10 @@
     "validate-commit-msg": "^2.12.2"
   },
   "peerDependencies": {
-    "consul": "^0.30.0",
-    "koa": "^2.4.1",
-    "koa-router": "^7.4.0",
-    "pidusage": "^1.2.0"
+    "consul": "*",
+    "koa": ">2.4",
+    "koa-router": "*",
+    "pidusage": "*"
   },
   "config": {
     "commitizen": {
