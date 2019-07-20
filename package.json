@@ -74,7 +74,7 @@
     "@types/node": "^10.0.9",
     "babel-core": "^6.26.3",
     "colors": "^1.1.2",
-    "commitizen": "^2.9.6",
+    "commitizen": "^4.0.3",
     "copy": "^0.3.1",
     "cross-env": "^5.0.1",
     "cz-conventional-changelog": "^2.1.0",
