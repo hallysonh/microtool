@@ -68,7 +68,7 @@
   },
   "devDependencies": {
     "@types/consul": "^0.23.32",
-    "@types/jest": "^23.0.0",
+    "@types/jest": "^24.0.17",
     "@types/koa": "^2.0.44",
     "@types/koa-router": "^7.0.27",
     "@types/node": "^10.0.9",
