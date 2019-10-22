@@ -71,7 +71,7 @@
     "@types/jest": "^23.0.0",
     "@types/koa": "^2.0.44",
     "@types/koa-router": "^7.0.27",
-    "@types/node": "^10.0.9",
+    "@types/node": "^12.11.4",
     "babel-core": "^6.26.3",
     "colors": "^1.1.2",
     "commitizen": "^2.9.6",
