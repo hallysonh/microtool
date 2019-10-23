@@ -133,9 +133,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/consul@^0.23.32":
-  version "0.23.32"
-  resolved "https://registry.yarnpkg.com/@types/consul/-/consul-0.23.32.tgz#1439b41c69f3e09e4f73e0b5df8338b8753cd12f"
+"@types/consul@^0.23.34":
+  version "0.23.34"
+  resolved "https://registry.yarnpkg.com/@types/consul/-/consul-0.23.34.tgz#d43eb0c2486f34aa51c49472f03014ccfd10e1ce"
+  integrity sha512-8h+W+TPuqhXQD/dYj3hThy2qQAFRGSe5NKTJ3c9Xd8/OceNEyYG1ys+BAT2OlEWRpsvqbL6H9LRhoHij3vECIg==
   dependencies:
     "@types/node" "*"
 
