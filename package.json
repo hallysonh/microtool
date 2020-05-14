@@ -70,7 +70,7 @@
     "@types/consul": "^0.23.32",
     "@types/jest": "^23.0.0",
     "@types/koa": "^2.0.44",
-    "@types/koa-router": "^7.0.27",
+    "@types/koa-router": "^7.4.1",
     "@types/node": "^10.0.9",
     "babel-core": "^6.26.3",
     "colors": "^1.1.2",
